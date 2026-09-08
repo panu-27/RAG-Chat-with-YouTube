@@ -40,11 +40,12 @@ def pinecone_ingest(video_id):
     ) 
     pc_index = pc_client.Index(pc_index_name)
     vectors = []
+    vector_embeddings = embeddings.embed_documents([chunk.page_content for chunk in chunks])
     for i,chunk in enumerate(chunks):
-        embedding = embeddings.embed_query(chunk.page_content) 
+        # embedding = embeddings.embed_query(chunk.page_content) 
         vector = {
             "id": f"chunk_{i}_{chunk.metadata.get("video_id")}",
-            "values":embedding,
+            "values":vector_embeddings[i],
             "metadata":{
                 "text": chunk.page_content, 
                 "video_id":chunk.metadata.get("video_id"),
