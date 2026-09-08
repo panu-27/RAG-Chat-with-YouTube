@@ -36,7 +36,7 @@ I've built it to gain a hands-on, practical understanding of how RAG systems wor
 
 🎨 Frontend: Streamlit
 
-📊 Vector Store: FAISS
+📊 Vector Store: Pinecone
 
 🔍 Embeddings: Google Embeddings
 
@@ -47,6 +47,7 @@ I've built it to gain a hands-on, practical understanding of how RAG systems wor
 ## 🚀 Quick Setup
 
 ### 1. 📥 Clone the repo
+### 1. 📥 clone the repo 
 ```bash
 git clone https://github.com/panu-27/RAG-Chat-with-YouTube.git
 ```
@@ -56,11 +57,10 @@ cd RAG-Chat-with-YouTube
 ```
 ### 3. 🔑 Setup API Key
 - Generate an API Key 🔗 _[Here.](https://aistudio.google.com/app/api-keys)_
-- Add it to your .env file:
-```bash
-echo 'GOOGLE_API_KEY="[YOUR-API-KEY-HERE]"' >> .env
-```
+- Login and Generate an API Key for 🔗 _[Pinecone](https://www.pinecone.io/)_
+- Create a `.env` file in the project root with your configuration variables. Reference the `.env.example` file for required variables.
 
+> #### (Recommended) from here run the project through docker please refer [Docker setup](./Docker-Setup.md) 
 ### 4. 📦 Install dependencies
 ```bash
 pip install -r requirements.txt
