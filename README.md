@@ -46,7 +46,6 @@ I've built it to gain a hands-on, practical understanding of how RAG systems wor
 ---
 ## 🚀 Quick Setup
 
-### 1. 📥 Clone the repo
 ### 1. 📥 clone the repo 
 ```bash
 git clone https://github.com/panu-27/RAG-Chat-with-YouTube.git
